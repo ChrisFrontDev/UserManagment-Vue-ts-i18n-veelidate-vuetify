@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
-import pt from 'vuetify/src/locale/pt';
+import i18n from './i18n';
 
 Vue.use(Vuetify);
 
@@ -22,7 +22,6 @@ export default new Vuetify({
     },
   },
   lang: {
-    locales: { pt },
-    current: 'pt',
+    t: (key: any, ...params: any) => i18n.t(key, params),
   },
 });

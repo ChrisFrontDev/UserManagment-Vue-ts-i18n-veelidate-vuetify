@@ -2,12 +2,13 @@
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <v-img
+        <!-- <v-img
           :src="require('../../assets/logo.svg')"
           class="my-3"
           contain
           height="200"
-        />
+        /> -->
+        <HelloI18n />
       </v-col>
 
       <v-col class="mb-4">
@@ -75,10 +76,16 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import HelloI18n from '@/components/HelloI18n.vue';
 
-@Component
+@Component({
+  components: {
+    HelloI18n,
+  },
+})
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  @Prop()
+  private msg!: string;
 
   private ecosystem = [
     {
