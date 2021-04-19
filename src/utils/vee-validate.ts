@@ -11,5 +11,5 @@ extend('required', {
 
 extend('email', {
   ...email,
-  message: (_, values) => i18n.t('LOGIN_FORM_EMAIL_VALID_MESSAGE', values),
+  message: (fieldName, values) => i18n.t('validation.email', values),
 });
