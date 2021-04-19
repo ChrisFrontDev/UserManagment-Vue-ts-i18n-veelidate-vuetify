@@ -2,5 +2,10 @@
   "validation": {
     "required": "é requirido",
     "email": "entre com um endereço de email válido"
+  },
+  "login": {
+    "page_title": "Bem-Vindo",
+    "label_email": "Endereço de Email",
+    "label_password": "Senha"
   }
 }

@@ -6,21 +6,21 @@
         <v-flex xs12 sm8 md4>
           <v-card class="elevation-12">
             <v-toolbar dark color="primary">
-              <v-toolbar-title>Bem-Vindo</v-toolbar-title>
+              <v-toolbar-title>{{ $t('login.page_title') }}</v-toolbar-title>
             </v-toolbar>
             <ValidationObserver ref="observer" v-slot="{ handleSubmit }">
               <v-form @submit.prevent="handleSubmit(handleLogin)">
                 <v-card-text>
                   <ValidationProvider
                     v-slot="{ errors }"
-                    name="email"
+                    :name="$t('login.label_email')"
                     rules="required|email"
                   >
                     <v-text-field
                       v-model="loginForm.email"
                       prepend-icon="mdi-email"
-                      name="email"
-                      label="Email"
+                      :name="$t('login.label_email')"
+                      :label="$t('login.label_email')"
                       type="text"
                       required
                       :error-messages="errors"
@@ -28,15 +28,15 @@
                   </ValidationProvider>
                   <ValidationProvider
                     v-slot="{ errors }"
-                    name="password"
+                    :name="$t('login.label_password')"
                     rules="required"
                   >
                     <v-text-field
                       prepend-icon="mdi-lock"
                       v-model="loginForm.password"
                       id="password"
-                      name="password"
-                      label="Password"
+                      :name="$t('login.label_password')"
+                      :label="$t('login.label_password')"
                       type="password"
                       required
                       :error-messages="errors"

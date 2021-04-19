@@ -1,6 +1,11 @@
 {
-  "validation":{
+  "validation": {
     "required": "is required",
-    "email":"please enter a valid email address"
+    "email": "please enter a valid email address"
+  },
+  "login": {
+    "page_title": "Welcome",
+    "label_email":"Email Address",
+    "label_password": "Password"
   }
 }
