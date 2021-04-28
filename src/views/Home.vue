@@ -32,20 +32,19 @@
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
-
     <v-main>
-      <HelloWorld />
+      <DataTable />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld/HelloWorld.vue'; // @ is an alias to /src
+import DataTable from '@/components/DataTable.vue'; // @ is an alias to /src
 
 @Component({
   components: {
-    HelloWorld,
+    DataTable,
   },
 })
 export default class Home extends Vue {}

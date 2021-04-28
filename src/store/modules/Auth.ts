@@ -4,7 +4,7 @@ import AuthService from '@/services/AuthService';
 const storedUser = localStorage.getItem('user');
 
 @Module({ namespaced: true })
-class User extends VuexModule {
+class Auth extends VuexModule {
   public status = storedUser ? { loggedIn: true } : { loggedIn: false };
   public user = storedUser ? JSON.parse(storedUser) : null;
 
@@ -57,4 +57,4 @@ class User extends VuexModule {
   }
 }
 
-export default User;
+export default Auth;
